@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>任浩龙｜个人简历</title>
+<style>
+:root{--navy:#173042;--ink:#2b414d;--muted:#6a7d86;--teal:#1b9c92;--teal-deep:#13786f;--mint:#eef8f6;--blue:#3e71d6;--blue-soft:#eef4ff;--yellow:#ffd65a;--line:#dce8e7;--paper:#fff;--canvas:#edf3f3}
+*{box-sizing:border-box}
+html{background:var(--canvas)}
+body{margin:0;color:var(--ink);font-family:"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;font-size:9.4pt;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:inherit;text-decoration:none}strong{font-weight:750;color:var(--navy)}p,li{margin-block-start:0;margin-block-end:0;text-wrap:pretty;line-break:strict;orphans:2;widows:2}
+.toolbar{position:sticky;top:0;z-index:5;display:flex;justify-content:center;align-items:center;gap:8px;padding:8px;background:rgba(237,243,243,.97);border-bottom:1px solid var(--line)}
+.toolbar button{height:34px;padding:0 13px;border:1px solid #c8d9d7;border-radius:8px;background:#fff;color:var(--navy);font:700 13px/1 "Segoe UI","Microsoft YaHei",sans-serif;cursor:pointer}.toolbar button.primary{border-color:var(--teal);background:var(--teal);color:#fff}.toolbar button:disabled{opacity:.45;cursor:not-allowed}.status{min-width:96px;color:var(--muted);font-size:12px}
+.page{position:relative;width:210mm;height:297mm;margin:10mm auto;padding:10mm 12mm 8mm;background:var(--paper);overflow:hidden;box-shadow:0 10px 28px rgba(30,58,68,.11)}
+.page::before{content:"";position:absolute;left:0;right:0;top:0;height:3.2mm;background:var(--teal)}
+#resumeContent[contenteditable="true"]{outline:1.5px dashed rgba(27,156,146,.55);outline-offset:3mm}
+#resumeContent[contenteditable="true"] [data-editable]{background:rgba(255,214,90,.12);border-radius:2px}
+.header{display:grid;grid-template-columns:minmax(0,1fr) 22mm;gap:6mm;align-items:center;padding:1mm 0 4mm;border-bottom:1px solid var(--line)}
+.name-line{display:flex;align-items:center;gap:4mm}.identity-meta{display:flex;flex-direction:column;align-items:flex-start;gap:1.1mm;padding-top:.8mm}h1{margin:0;color:var(--navy);font-size:25pt;line-height:1;font-weight:800;letter-spacing:.5px}.handle{color:var(--teal);font:700 8.2pt/1 Consolas,"Cascadia Code",monospace}.role{margin:0;color:var(--blue);font-size:10.2pt;line-height:1.15;font-weight:750;letter-spacing:.1px}.contact-row{display:flex;flex-wrap:wrap;gap:1mm 3.5mm;margin-top:2.3mm;color:var(--muted);font-size:7.75pt}.contact-row span{position:relative;padding-left:2.4mm}.contact-row span::before{content:"";position:absolute;left:0;top:.52em;width:1mm;height:1mm;border-radius:50%;background:var(--teal)}
+.avatar-shell{position:relative;width:21mm;height:21mm;padding:1.4mm;border-radius:50%;background:var(--mint);border:1px solid #cbe8e3}.avatar{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}.avatar-shell::after{content:"";position:absolute;right:-1mm;bottom:1mm;width:4.5mm;height:4.5mm;border-radius:50%;background:var(--yellow);border:1.2mm solid #fff}
+.intro{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;margin:4mm 0}.intro-item{padding:2.4mm 3mm;border-top:2px solid var(--teal);background:var(--mint)}.intro-item:nth-child(2){border-color:var(--blue);background:var(--blue-soft)}.intro-item:nth-child(3){border-color:var(--yellow);background:#fffaf0}.intro-kicker{margin-bottom:.7mm;color:var(--muted);font-size:7pt;font-weight:700;letter-spacing:.4px;text-transform:uppercase}.intro-value{color:var(--navy);font-size:8.25pt;font-weight:750;line-height:1.35}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 52mm;gap:6mm}.main,.side{min-width:0}.side{padding-left:5mm;border-left:1px solid var(--line)}.section{margin-bottom:3.6mm;break-inside:avoid}.section-title{display:flex;align-items:center;gap:2.2mm;margin:0 0 2.2mm;color:var(--navy);font-size:11pt;font-weight:800;line-height:1}.section-title::before{content:"";width:3mm;height:3mm;border-radius:50%;background:var(--teal)}.section-title::after{content:"";height:1px;flex:1;background:var(--line)}.side .section-title{font-size:10.2pt}.side .section-title::after{display:none}
+.company-head,.project-head{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}.company-title{color:var(--navy);font-size:10pt;font-weight:800}.company-role{color:var(--teal-deep);font-weight:750}.date{flex:none;color:var(--muted);font-size:7.35pt;font-weight:700}.company-summary{margin-top:1mm;color:#405661;font-size:8.2pt;line-height:1.42}
+.timeline{position:relative;margin-left:1mm;padding-left:5mm}.timeline::before{content:"";position:absolute;left:.8mm;top:1.5mm;bottom:1mm;width:1px;background:#cfe3df}.project{position:relative;margin-bottom:2.7mm}.project:last-child{margin-bottom:0}.project::before{content:"";position:absolute;left:-5.7mm;top:1.6mm;width:2.5mm;height:2.5mm;border-radius:50%;background:#fff;border:1.4mm solid var(--teal)}.project-name{color:var(--navy);font-size:9.15pt;font-weight:800}.project-role{color:var(--teal-deep);font-size:7.7pt;font-weight:750}.project-copy{margin:.75mm 0 0;color:#435965;font-size:7.95pt;line-height:1.4}.project-copy + .project-copy{margin-top:.45mm}.tech{color:var(--blue);font-weight:700}
+.oss-list{display:grid;gap:2mm}.oss{padding:2.35mm 2.8mm;border:1px solid var(--line);border-radius:3mm}.oss.featured{border-color:#c8dfda;background:var(--mint)}.oss-head{display:flex;justify-content:space-between;gap:2mm;align-items:baseline}.oss-name{color:var(--navy);font-size:9pt;font-weight:800}.oss-badge{color:var(--blue);font-size:7pt;font-weight:750}.oss p{margin:.8mm 0 0;color:#455d67;font-size:7.8pt;line-height:1.4}.project-matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35mm;margin-top:1.7mm}.matrix-item{padding:1.7mm 2mm;border-left:1.5mm solid var(--teal);background:#f6faf9}.matrix-item:nth-child(2n){border-left-color:var(--blue);background:#f6f8fd}.matrix-item:last-child:nth-child(odd){grid-column:1 / -1}.matrix-top{display:flex;align-items:baseline;justify-content:space-between;gap:1.5mm}.matrix-name{color:var(--navy);font-size:7.75pt;font-weight:800;white-space:nowrap}.matrix-star{color:#bd7d00;font-size:6.65pt;font-weight:800;white-space:nowrap}.matrix-meta{margin-top:.25mm;color:var(--blue);font-size:6.7pt;font-weight:700}.matrix-desc{margin-top:.25mm;color:var(--muted);font-size:6.8pt;line-height:1.28}
+.skill-block{margin-bottom:2.25mm}.skill-name{margin-bottom:.55mm;color:var(--blue);font-size:8pt;font-weight:800}.skill-copy{color:#465e68;font-size:7.75pt;line-height:1.43}.edu{padding-left:3mm;border-left:2px solid var(--yellow)}.edu-title{color:var(--navy);font-size:8.3pt;font-weight:800;line-height:1.35}.edu-meta{margin-top:.5mm;color:var(--muted);font-size:7.25pt}.mini-list{list-style:none;margin:1.2mm 0 0;padding:0;display:grid;gap:.85mm}.mini-list li{position:relative;padding-left:2.7mm;color:#465e68;font-size:7.65pt;line-height:1.4}.mini-list li::before{content:"+";position:absolute;left:0;color:var(--teal);font-weight:900}.profile{padding:2.3mm 2.7mm;background:var(--mint);border-radius:3mm;color:#455e67;font-size:7.75pt;line-height:1.48}.hobby{padding:2.4mm 2.8mm;background:#fffaf0;border-radius:0 3mm 3mm 0;border-left:2px solid var(--yellow);color:#5f6654;font-size:7.7pt;line-height:1.48}
+@page{size:A4;margin:0}@media print{html,body{background:#fff}.toolbar{display:none!important}.page{margin:0;box-shadow:none}#resumeContent[contenteditable="true"]{outline:none}#resumeContent[contenteditable="true"] [data-editable]{background:transparent}}
+</style>
+</head>
+<body>
+
+<main>
+<article class="page">
+<div id="resumeContent">
+  <header class="header">
+    <div>
+      <div class="name-line"><h1>任浩龙</h1><div class="identity-meta"><p class="role">后端 · 客户端 · 网络 · AI 应用开发</p><span class="handle">@Pikachu Ren</span></div></div>
+      <div class="contact-row">
+        <span>QQ: 894662978</span><span>pikachuim@foxmail.com</span><span>成都</span>
+        <span><a href="https://github.com/PIKACHUIM">github.com/PIKACHUIM</a></span>
+        <span><a href="https://coding.pika.net.cn/">coding.pika.net.cn</a></span><span>TG: @pikakapi</span>
+      </div>
+    </div>
+    <div class="avatar-shell"><img class="avatar" src="../images/pika.jpg" alt="Pikachu avatar"></div>
+  </header>
+
+  <div class="intro">
+    <div class="intro-item"><div class="intro-kicker">EXPERIENCE</div><div class="intro-value">5 年客户端 / 后端开发经验<br>现就职于腾讯</div></div>
+    <div class="intro-item"><div class="intro-kicker">OPEN SOURCE</div><div class="intro-value">OpenList 万星开源项目<br>创始人 / 主要维护者</div></div>
+    <div class="intro-item"><div class="intro-kicker">PROFILE</div><div class="intro-value">乐呵人 · 好沟通<br>善于规划 · 执行力在线</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="main">
+      <section class="section">
+        <h2 class="section-title">工作经历</h2>
+        <div>
+          <div class="company-head"><div class="company-title">腾讯科技（成都）有限公司 <span class="company-role">· 开发</span></div><div class="date">2022.03 - 2026.09 · 成都</div></div>
+          <p class="company-summary">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 负责《王者荣耀》《QQ飞车手游》《使命召唤手游》游戏内插件、测试工具、游戏测试管理，参与 GameRobot、Benchmark、AIQA 等平台开发；训练通用游戏AI模型、微调LLM，开发AI应用。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">代表项目</h2>
+        <div class="timeline">
+          <article class="project">
+            <div class="project-head"><div><span class="project-name">GameSDK与自动化工具链</span> <span class="project-role">· 平台 / 协作开发</span></div><span class="date">2022.03 - 2026.09</span></div>
+            <p class="project-copy">&nbsp; &nbsp;&nbsp;<span class="tech" style="color: rgb(62, 113, 214);">Python · C# · Lua </span>；<span style="font-size: 7.95pt; text-wrap-mode: initial;">负责《王者荣耀》《QQ 飞车手游》《使命召唤手游》的 C# / Lua 游戏插件及自动化测试工具链。</span><span style="font-size: 7.95pt; text-wrap-mode: initial;">开发 GM 功能、PerfDog 性能数据、资源与日志采集、自动化执行等能力；使用 C# 调用游戏内接口并封装为插件、UI，或使用 Lua 编写脚本。</span></p>
+          </article>
+          <article class="project">
+            <div class="project-head"><div><span class="project-name">GameRobot 游戏测试平台</span> <span class="project-role">· 平台 / 系统开发</span></div><span class="date">2024.07 - 2026.09</span></div>
+            <p class="project-copy"><span class="tech">&nbsp; &nbsp; Python · Django · MySQL · Vue</span>；设计并实现平台服务端、客户端周边系统与游戏内插件。<span style="font-size: 7.95pt; text-wrap-mode: initial;">平台管理流水线构建、设备、任务、数据和报告全流程；负责 Web、后端数据处理、客户端任务管理、安装资源推送及场景脚本。</span></p>
+          </article>
+          <article class="project">
+            <div class="project-head"><div><span class="project-name">Bench Mark 性能基准平台</span> <span class="project-role">· 项目经理 / 开发</span></div><span class="date">2023.09 - 2025.12</span></div>
+            <p class="project-copy">&nbsp; &nbsp; 设计并实现 Benchmark 新平台，统计用户的设备占比、评估设备性能，并提供游戏性能基准。<span style="font-size: 7.95pt; text-wrap-mode: initial;">开发和维护平台及设备、用户数据；根据设备用户数制定和评审 </span><strong style="font-size: 7.95pt; text-wrap-mode: initial;">TDR3 标准</strong><span style="font-size: 7.95pt; text-wrap-mode: initial;">，划分性能基准档位。</span></p>
+          </article>
+          <article class="project">
+            <div class="project-head"><div><span class="project-name">AIQA-AI全自动化测试平台</span> <span class="project-role">· 项目经理&nbsp;/ 开发</span></div><span class="date">2026.01 - 2026.09</span></div>
+            <p class="project-copy"><span class="tech">&nbsp; &nbsp; Go · Wails · React · Ant Design</span>；设计并开发支持全流程 AI 自动化测试和游戏内 UI 操作的平台，<span style="font-size: 7.95pt; text-wrap-mode: initial;">平台管理测试需求、AI 用例生成、执行监控和报告；负责平台设计、逻辑与本地客户端开发。</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">开源影响</h2>
+        <div class="oss-list">
+          <article class="oss featured">
+            <div class="oss-head"><span class="oss-name"><a href="https://github.com/OpenListTeam/OpenList">OpenList</a></span><span class="oss-badge">Go · 24.3k Stars · 创始人 / 主要维护者</span></div>
+            <p><strong>项目简介：</strong>文件列表挂载项目，解决多网盘统一访问问题，支持数十种网盘驱动及 WebDAV 协议。</p>
+            <p><strong>主要工作：</strong>负责网盘驱动开发、功能改进、漏洞修复与项目维护；Star 数据截至 2026.08。</p>
+          </article>
+          <article class="oss">
+            <div class="oss-head"><span class="oss-name">开源项目</span><span class="oss-badge">独立维护 / 社区贡献</span></div>
+            <p>维护十余开源项目，覆盖网络、安全、证书与系统工具；<span style="font-size: 7.8pt; text-wrap-mode: initial;">通过 PR 为社区项目增加功能或修复漏洞。</span></p>
+            <div class="project-matrix">
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/FakeSign">FakeSign</a></span><span class="matrix-star">513 Stars</span></div><div class="matrix-meta">PowerShell · 驱动签名</div><div class="matrix-desc">自建时间戳服务，解决驱动测试签名问题。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/BanCert">BanCert</a></span><span class="matrix-star">165 Stars</span></div><div class="matrix-meta">Python · Windows 安全</div><div class="matrix-desc">按代码签名证书限制 Windows 流氓软件运行。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/CFWorkerACME">CFWorkerACME</a></span><span class="matrix-star">93 Stars</span></div><div class="matrix-meta">TypeScript · Cloudflare</div><div class="matrix-desc">在 Worker 上实现 SSL 证书申请代理与自动化。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/TPMSmartCard">TPMSmartCard</a></span><span class="matrix-star">28 Stars</span></div><div class="matrix-meta">Python · TPM</div><div class="matrix-desc">基于 TPM 创建和管理 Windows 虚拟智能卡。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/NetPanel">NetPanel</a></span><span class="matrix-star">27 Stars</span></div><div class="matrix-meta">TypeScript · 网络管理</div><div class="matrix-desc">管理家庭服务器内网穿透与端口映射。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/OpenIDCSTeam/HostAgent">Open IDC</a></span><span class="matrix-star">13 Stars</span></div><div class="matrix-meta">Python · 虚拟化</div><div class="matrix-desc">实现虚拟化管理平台的主机受控端。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/PIKACHUIM/RDDocker">RDDocker</a></span><span class="matrix-star">28 Stars</span></div><div class="matrix-meta">Shell · Docker</div><div class="matrix-desc">提供带桌面环境和远程桌面访问的容器镜像。</div></div>
+              <div class="matrix-item"><div class="matrix-top"><span class="matrix-name"><a href="https://github.com/laobamac/MirageWallpaper">MirageWallpaper</a></span><span class="matrix-star">157 Stars</span></div><div class="matrix-meta">C++ · macOS</div><div class="matrix-desc">参与动态壁纸引擎功能支持与问题修复。</div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="section">
+        <h2 class="section-title">专业技能</h2>
+        <div>
+          <div class="skill-block"><div class="skill-name">编程语言</div><div class="skill-copy">更熟悉 Python、Go、TypeScript</div><div class="skill-copy">会一点 C / C++ / C#、Rust、Java</div></div>
+          <div class="skill-block"><div class="skill-name">前端技术</div><div class="skill-copy">经常使用 React、Vite、Ant Design</div><div class="skill-copy">偶尔使用 Next.js、Vue。</div></div>
+          <div class="skill-block"><div class="skill-name">后端技术</div><div class="skill-copy">主要使用 Gin、Hono、Flask、Node.js</div></div>
+          <div class="skill-block"><div class="skill-name">数据存储</div><div class="skill-copy">主要使用 MySQL、SQLite、Redis。</div></div>
+          <div class="skill-block"><div class="skill-name">系统环境</div><div class="skill-copy">主要使用 Linux、Docker、LXC。</div></div>
+          <div class="skill-block"><div class="skill-name">构建流程</div><div class="skill-copy">Git / GitHub、SVN、蓝盾 DevOps。</div></div>
+          <div class="skill-block"><div class="skill-name">其他能力</div><div class="skill-copy">擅长网络开发、客户端设计</div><div class="skill-copy">支持 LLM 小模型 LoRA 微调</div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">教育经历</h2>
+        <div class="edu">
+          <div class="edu-title">四川大学<br>计算机 · 本科</div>
+          <div class="edu-meta">2018.09 - 2022.06 · 成都</div>
+          <ul class="mini-list">
+            <li>数据结构、计算机网络、算法等</li><li>操作系统、数据库、通信原理等</li>
+            <li>大学生创新创业计划国家一等奖</li><li>2021 RoboMaster 全国赛二等奖</li>
+            <li>挑战杯全国大学生创新赛三等奖</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">个人简介</h2>
+        <div class="profile">人称皮卡丘，现在腾讯工作<span style="font-size: 7.75pt;">五年， 具备游戏客户端 / 后端开发经验，</span><span style="font-size: 7.75pt;">Github万星项目OpenList创始人，是个</span><span style="font-size: 7.75pt;">乐呵人很好沟通，</span><span style="font-size: 7.75pt;">善于规划，执行能力强，</span><span style="font-size: 7.75pt;">具备大型项目设计、管理能力，喜欢尝试新鲜的技术，也会训练自己的AI大语言模型等</span></div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">个人爱好</h2>
+        <div class="hobby">二游（原神 / 鸣潮）、旅游 / 美食、宝可梦、动漫、参与开源社区开发（做一些有趣的小项目）</div>
+      </section>
+    </aside>
+  </div>
+</div>
+</article>
+</main>
+
+
+
+</body></html>

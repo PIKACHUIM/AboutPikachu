@@ -1,8 +1,3 @@
-.github/
-images/
-mykeys/
-resume/
-worker/
 node_modules/
 dist/
 .wrangler/

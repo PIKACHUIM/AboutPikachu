@@ -1,0 +1,18 @@
+name = "pikapage-work"
+main = "src/index.ts"
+compatibility_date = "2024-05-29"
+
+[observability]
+enabled = true
+
+# Allow text files (HTML / keys / certs) to be imported as plain strings
+[[rules]]
+type = "Text"
+globs = ["**/*.html", "**/*.asc", "**/*.pub", "**/*.crt", "**/*.key", "**/*.pem"]
+fallthrough = true
+
+# Allow binary assets to be imported as ArrayBuffer (custom rule wins over default)
+[[rules]]
+type = "Data"
+globs = ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.webp", "**/*.svg", "**/*.ico", "**/*.pdf"]
+fallthrough = true
