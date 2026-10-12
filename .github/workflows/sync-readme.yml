@@ -1,0 +1,42 @@
+name: Sync README to Profile Repo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-readme
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+
+      - name: Sync README to PIKACHUIM/PIKACHUIM
+        env:
+          TARGET_REPO: PIKACHUIM/PIKACHUIM
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git clone "https://x-access-token:${SYNC_TOKEN}@github.com/${TARGET_REPO}.git" target-repo
+
+          cp README.md target-repo/README.md
+
+          cd target-repo
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README is already up to date. Nothing to sync."
+          else
+            git commit -m "sync: update README from AboutPikachu"
+            git push
+            echo "README synced successfully."
+          fi
